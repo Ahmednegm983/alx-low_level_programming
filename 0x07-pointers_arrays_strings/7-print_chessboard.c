@@ -1,19 +1,12 @@
 #include "main.h"
+char *_memset(char *s, char b, unsigned int n) {
+    for (unsigned int i = 0; i < n; i++) {
+        *(s + i) = b;
+    }
+    return s;
+} 
 
-/**
- * print_chessboard - prints the chessboard
- * @a: two dimension array to print
- */
-void print_chessboard(char (*a)[8])
-{
-	int i, j;
-
-	for (i = 0; i < 8; i++)
-	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
-	}
-}
+// Example usage:
+char arr[10];
+_memset(arr, 'A', 10); // Fills arr with 'A'
+```
